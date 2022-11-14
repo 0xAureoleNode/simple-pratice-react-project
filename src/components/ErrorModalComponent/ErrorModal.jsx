@@ -1,10 +1,11 @@
 import styles from './ErrorModal.module.css';
 import Card from '../Card/Card';
 import Button from '../Button/Button';
+import { Fragment } from 'react';
 
 const ErrorModal = ({ title, message, trigHandler }) => {
   return (
-    <div>
+    <Fragment>
       <div className={styles.backdrop} onClick={trigHandler} />
       <Card className={styles.modal}>
         <header className={styles.header}>
@@ -17,7 +18,7 @@ const ErrorModal = ({ title, message, trigHandler }) => {
           <Button onClick={trigHandler}>Okay</Button>
         </footer>
       </Card>
-    </div>
+    </Fragment>
   );
 };
 
